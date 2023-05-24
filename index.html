@@ -1,72 +1,175 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Component</title>
 
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+  <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
+    <style>
+      /* 
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        /*font-family: 'Gentium Plus', serif;*/
+        color: #343a40;
+        line-height: 1;
+    
+      
+      }
+     .accordion{
+      width: 700px;
+      margin: 100px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+     }
+     .item{
+      box-shadow: 0 0 32px rgba(0,0,0,0.2);
+      padding: 24px;
+      /*border-top: 8px solid aquamarine;*/
+      /*grid setting*/
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      column-gap: 24px;
+      row-gap: 32px;
+      
+     }
+     .number,.text{
+      font-size: 24px;
+      font-weight: 600;
+      /*color: aquamarine;*/
+     }
+     .number{
+      color: #e9ecef;
+     }
+     
+     .icon{width: 24px;
+    height: 24px;
+    stroke: aquamarine;
+    }
+    .hidden-box{
+      grid-column: 2/3;
+      display: none;
+    }
+    .hidden-box p{
+     line-height: 1.5;
+     margin-bottom: 24px;
+     
+    }
+    .hidden-box ul{
+      font-family: 'Noto Sans JP', sans-serif;
+      margin-left: 20px;
+      color: #868e96;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+     /* align-items: center;*/
+      
+    }
+    .open{
+      border-top: 8px solid aquamarine;
+
+    }
+    .open .hidden-box{
+      display: block;
+    }
+    .open .number,.open .text{
+      color: aquamarine;
+    }
+    /*.hidden-box li{
+      margin-bottom: 12px;
+    }*/
+    </style>
   </head>
   <body>
-       <header>
-         <h1>📘 Shang-Ting Tsai</h1>
-     
-      <nav>
-          <a href="blog.html" target="_blank">blog</a>
-          <a href="http://google.com" target="_blank">google</a>
-          <a href="css-grid.html">css</a>
-          <a href="RWD.html">RWD</a>
-      </nav>
-
-    </header>
-
-<article>
-<p>All modern websites and web applications are built using three <i>fundamental</i> technologies: HTML, CSS and JavaScript. These are the languages of the web.
-<br>In this post, let's focus on HTML. We will learn what HTML is all about, and why you too should learn it.
-</p>
-<h2>What is HTML?</h2>
-<p>HTML stands for HyperText Markup Language. It's a markup language that web developers use to structure and describe the content of a webpage (not a programming language).
-  <br>HTML consists of elements that describe different types of content: paragraphs, links, headings, images, video, etc. Web browsers understand HTML and render HTML code as websites.
-</p>
-<p>In HTML, each element is made up of 3 parts:</p>
-<ol>
-    <li>The opening tag</li>
-    <li>The closing tag</li>
-    <li>The actual element</li>
-</ol>
-<p>You can learn more at the <a href="https://developer.mozilla.org/zh-TW/">MDN Web Docs</a>.</p>
-<p><b>Why should you learn HTML?</b></p>
-<p>There are countless reasons for learning the fundamental language of the web. Here are 5 of them:</p>
-<ul>
-    <li>To be able to use the fundamental web dev language</li>
-    <li>To hand-craft beautiful websites instead of relying on tools like Worpress or Wix</li>
-    <li>To build web applications</li>
-    <li>To impress friends</li>
-    <li>To have fun 😃</li>
-</ul>
-<p>See you next time!</p>
-</article>
-<aside class="color-change">
-<h3>Related posts</h3>
-<uL>
-<li>
-    <img src="img/related-1.jpg" alt="related one" width=75" height="75">
-    <a href="1">How to learn</a>
-    <p>By Shang-Ting</p>
-</li>
-<li>
-    <img src="img/related-2.jpg" alt="related one" width=75" height="75">
-    <a href="1">The Unknown Power of css</a>
-    <p>By Shang-Ting</p>
-</li>
-<li>
-    <img src="img/related-2.jpg" alt="related one" width=75" height="75">
-    <a href="1">Why Java is Awesome</a>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">01</p>
+        <p class="text">Project net worth over time</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+        
+        <div class="hidden-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum placeat fugiat molestiae eaque dignissimos<br>
+           provident maxime nesciunt, ex similique veniam consectetur nero, doloribus quam cum, voluptatibus distinctio soluta. 
+           <br>Id, temporibus.</p>
+    
+       <ul>
+        <li>走れソリよー♪</li>
+        <li>風の様にー♪</li>
+        <li>月見原をー♪</li>
+        <li>ぱどるぱどるー♪</li>
+        
+       </ul>
+       </div>
+      </div>
+      <div class="item open">
+      <p class="number">02</p>
+      <p class="text">Icorporate the essential data</p>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+      
+      <div class="hidden-box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum placeat fugiat molestiae eaque dignissimos<br>
+         provident maxime nesciunt, ex similique veniam consectetur nero, doloribus quam cum, voluptatibus distinctio soluta. 
+         <br>Id, temporibus.</p>
   
-    <p>By Shang-Ting</p>
-</li>
-</uL>
-</aside>
-   
-  <button>like👍</button>
-<footer>copyright &copy; 2027 by the code magazine</footer>
+     <ul>
+      <li>走れソリよー♪</li>
+      <li>風の様にー♪</li>
+      <li>月見原をー♪</li>
+      <li>ぱどるぱどるー♪</li>
+      
+     </ul>
+     </div>
+    </div>
+    <div class="item">
+      <p class="number">03</p>
+      <p class="text">Reflect your all-in costs</p>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+      
+      <div class="hidden-box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum placeat fugiat molestiae eaque dignissimos<br>
+         provident maxime nesciunt, ex similique veniam consectetur nero, doloribus quam cum, voluptatibus distinctio soluta. 
+         <br>Id, temporibus.</p>
+  
+     <ul>
+      <li>走れソリよー♪</li>
+      <li>風の様にー♪</li>
+      <li>月見原をー♪</li>
+      <li>ぱどるぱどるー♪</li>
+      
+     </ul>
+     </div>
+    </div>
+    </div>
   </body>
 </html>
