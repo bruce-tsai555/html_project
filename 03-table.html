@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+  <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
+    <style>
+    
+    
+      /* 
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        /*font-family: 'Gentium Plus', serif;*/
+        color: #343a40;
+        line-height: 1;
+      }
+     /*table*/
+
+     table{
+        width: 800px;
+        margin: 100px auto;
+        border: 1px solid #343a40;
+        font-size: 18px;
+        border-collapse: collapse;
+
+     }
+
+     th,td{
+       /* border: 1px solid #343a40;*/
+        text-align: left;
+        padding: 16px 24px;
+        width: 25%;
+     }
+     thead th{
+        background-color: aquamarine;
+        color: #fff;
+     }
+     tbody tr:nth-child(odd){
+        background-color: #eae7e7;
+     }
+     tbody tr:nth-child(even){
+        background-color: rgb(141, 141, 141);
+     }
+
+    </style>
+  </head>
+  <body>
+ <table>
+    <thead>
+    <tr>
+        <th>chair</th>
+        <th>the laid back</th>
+        <th>the worker bee</th>
+        <th>the chair4/2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>width</th>
+        <td>80</td>
+        <td>60</td>
+        <td>220</td>
+    </tr>
+    <tr>
+        <th>height</th>
+        <td>80</td>
+        <td>60</td>
+        <td>220</td>
+    </tr>
+    <tr>
+        <th>depth</th>
+        <td>80</td>
+        <td>60</td>
+        <td>220</td>
+    </tr>
+    <tr>
+        <th>weight</th>
+        <td>80</td>
+        <td>60</td>
+        <td>220</td>
+    </tr>
+</tbody>
+ </table>
+  </body>
+</html>
