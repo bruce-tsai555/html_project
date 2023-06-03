@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordion Component</title>
+    <title> Component</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
         color: #343a40;
         line-height: 1;
     
-      
+      /*css accordion*/
       }
      .accordion{
       width: 700px;
@@ -103,9 +103,139 @@
     /*.hidden-box li{
       margin-bottom: 12px;
     }*/
+
+/*css carousel*/
+img{
+        height: 200px;
+        transform: scale(1.5);
+        border-radius: 8px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      }
+      .btn{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 50%;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .btn-left{
+        left: 0;
+        transform: translate(-50%,-50%);
+        top: 50%;
+      }
+      .btn-right{
+      right: 0;
+      transform: translate(50%,-50%);
+       top: 50%;
+      }
+      .btn-icon{
+        stroke: aquamarine;
+        width: 24px;
+        height: 24px;
+      }
+      .quote-text{
+       font-size: 18px;
+       font-weight: 500;
+       line-height: 1.5;
+       margin-bottom: 32px;
+      }
+      .quote-author{
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      .quote-job{
+        font-size: 12px;
+      }
+      .carousel{
+        background-color: aquamarine;
+        margin: 100px auto;
+        width: 800px;
+        padding: 32px;
+        color: #e6fcf5;
+        padding-left: 86px;
+        padding-right: 48px;
+        border-radius: 8px;
+        position: relative;
+
+        /*flex*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 86px;
+        
+      }
+      .dots{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%,32px);
+        display: flex;
+        gap: 12px;
+      }
+      .dot{
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border: 2px solid aquamarine;
+        border-radius: 50%;
+      }
+      .dot-fill{
+        background-color: aquamarine;
+      }
+
+      /*css table*/
+      table{
+        width: 800px;
+        margin: 100px auto;
+        border: 1px solid #343a40;
+        font-size: 18px;
+        border-collapse: collapse;
+
+     }
+
+     th,td{
+       /* border: 1px solid #343a40;*/
+        text-align: left;
+        padding: 16px 24px;
+        width: 25%;
+     }
+     thead th{
+        background-color: aquamarine;
+        color: #fff;
+     }
+     tbody tr:nth-child(odd){
+        background-color: #eae7e7;
+     }
+     tbody tr:nth-child(even){
+        background-color: rgb(141, 141, 141);
+     }
+     /*css nav*/
+     nav{
+background-color: aquamarine;
+color: #fff;
+text-align: center ;
+height: 50px;
+font-size: 2rem;
+     }
+     nav a{
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
     </style>
   </head>
   <body>
+    <nav>
+      <a href="#Accordion">Accordion</a>
+      <a href="#Carousel">Carousel</a>
+      <a href="#Table">Table</a>
+    </nav>
+    <div id="Accordion">
     <div class="accordion">
       <div class="item">
         <p class="number">01</p>
@@ -172,6 +302,75 @@
      </div>
     </div>
     </div>
-   
+   </div>
+   <div id="Carousel">
+    <div class="carousel">
+      <img src="img/PeterRabbit8.jpg" alt="rabbit">
+      <blockquote class="quote">
+          <p class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum odio aspernatur
+               quis cum optio in nulla aliquam vel dicta,
+               dolores similique accusamus porro nam, saepe nemo eum molestiae esse quaerat?</p>
+               <p class="quote-author">peter</p>
+               <p class="quote-job">rabbit</p>
+      </blockquote>
+      <button class="btn btn-left">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            
+      </button>
+      <button class="btn btn-right">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+            
+      </button>
+      
+  <div class="dots">
+      <button class="dot">&nbsp;</button>
+      <button class="dot dot-fill">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+  </div>
+   </div>
+   </div>
+   <div id="Table">
+    <table>
+      <thead>
+      <tr>
+          <th>chair</th>
+          <th>the laid back</th>
+          <th>the worker bee</th>
+          <th>the chair4/2</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <th>width</th>
+          <td>80</td>
+          <td>60</td>
+          <td>220</td>
+      </tr>
+      <tr>
+          <th>height</th>
+          <td>80</td>
+          <td>60</td>
+          <td>220</td>
+      </tr>
+      <tr>
+          <th>depth</th>
+          <td>80</td>
+          <td>60</td>
+          <td>220</td>
+      </tr>
+      <tr>
+          <th>weight</th>
+          <td>80</td>
+          <td>60</td>
+          <td>220</td>
+      </tr>
+  </tbody>
+   </table>
+   </div>
   </body>
 </html>
